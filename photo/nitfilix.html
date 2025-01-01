@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Netflix Clone</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #141414;
+            color: white;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        h1, h2, p {
+            margin: 0;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: transparent;
+        }
+
+        .navbarright-section button {
+            background-color: transparent;
+            color: white;
+            border: none;
+            margin-left: 10px;
+            font-size: 14px;
+            cursor: pointer;
+            padding: 8px 16px;
+        }
+
+        .navbarright-section .red {
+            background-color: #e50914;
+            border-radius: 4px;
+            color: white;
+        }
+
+        /* Hero Section */
+        .client-section {
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .client-section h1 {
+            font-size: 2.5rem;
+        }
+
+        .world-section, .page-section {
+            text-align: center;
+            font-size: 1.2rem;
+            margin: 20px;
+        }
+
+        .email-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .email-address {
+            display: flex;
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .email-address input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #8c8c8c;
+            border-right: none;
+            outline: none;
+        }
+
+        .email-address button {
+            background-color: #e50914;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        /* Trending Section */
+        .header-section {
+            text-align: center;
+            margin: 40px 0 20px 0;
+        }
+
+        .photos-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .photos-section div img {
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+
+        .photos-section div img:hover {
+            transform: scale(1.05);
+        }
+
+        /* More Reasons Section */
+        .box-section {
+            text-align: center;
+            margin: 50px 20px;
+        }
+
+        .box-section .parent-box {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .box-section .box {
+            background-color: #333;
+            padding: 20px;
+            border-radius: 8px;
+            width: 100%;
+            max-width: 300px;
+            text-align: center;
+        }
+
+        /* FAQ Section */
+        .question-section {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .question {
+            margin-bottom: 20px;
+        }
+
+        .question h2 {
+            cursor: pointer;
+        }
+
+        .question p {
+            display: none;
+            font-size: 0.9rem;
+            margin-top: 10px;
+        }
+
+        .question.active p {
+            display: block;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            background-color: #181818;
+            padding: 20px;
+        }
+
+        footer h2 {
+            margin-bottom: 10px;
+        }
+
+        footer ul {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        footer ul li {
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .photos-section div img {
+                width: 100%;
+                max-width: 150px;
+            }
+
+            .email-address {
+                flex-direction: column;
+            }
+
+            .email-address input {
+                border-right: 1px solid #8c8c8c;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Navbar Section -->
+        <div class="navbar">
+            <div class="image-section">
+                <img src="nitfilx.jpg" alt="Netflix Logo" style="width: 125px; height: 50px;" class="logo-img">
+            </div>
+            <div class="navbarright-section">
+                <button class="transparent">English</button>
+                <button class="red">Sign In</button>
+            </div>
+        </div>
+
+        <!-- Main Section -->
+        <div class="client-section">
+            <h1>Unlimited movies, TV shows, and more</h1>
+        </div>
+        <div class="world-section">
+            <p>Starts at ₹149. Cancel anytime.</p>
+        </div>
+        <div class="page-section">
+            <p>Ready to watch? Enter your email to create or restart your membership.</p>
+        </div>
+
+        <div class="email-section">
+            <div class="email-address">
+                <input type="email" placeholder="Email address">
+                <button>Get Started</button>
+            </div>
+        </div>
+
+        <!-- Trending Section -->
+        <div class="header-section">
+            <h1>Trending Now</h1>
+        </div>
+        <div class="photos-section">
+            <div><img src="image7-5.jpg" alt="Movie 1" height="250" width="250"></div>
+            <div><img src="images (1).jpg" alt="Movie 2" height="250" width="250"></div>
+            <div><img src="images (2).jpg" alt="Movie 3" height="250" width="250"></div>
+            <div><img src="images.jpg" alt="Movie 4" height="250" width="250"></div>
+            <div><img src="photo.jpg" alt="Movie 5" height="250" width="250"></div>
+        </div>
+
+        <!-- More Reasons Section -->
+        <div class="box-section">
+            <h1>More Reasons to Join</h1>
+            <div class="parent-box">
+                <div class="box">
+                    <h1>Enjoy on your TV</h1>
+                    <p>Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.</p>
+                </div>
+                <div class="box">
+                    <h1>Download your shows to watch offline</h1>
+                    <p>Save your favorites easily and always have something to watch.</p>
+                </div>
+                <div class="box">
+                    <h1>Watch Everywhere</h1>
+                    <p>Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV.</p>
+                </div>
+                <div class="box">
+                    <h1>Create Profiles for Kids</h1>
+                    <p>Send kids on adventures with their favorite characters in a space made just for them — free with your membership.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="question-section">
+            <h1>Frequently Asked Questions</h1>
+            <div class="question">
+                <h2>What is Netflix?</h2>
+                <p>Netflix is a streaming service...</p>
+            </div>
+            <!-- Add similar FAQ questions here -->
+        </div>
+
+        <!-- Footer Section -->
+        <footer>
+            <h2>Questions? Call 000-800-919-1694</h2>
+            <ul>
+                <li>FAQ</li>
+                <li>Help Center</li>
+                <li>Terms of Use</li>
+                <li>Privacy</li>
+            </ul>
+        </footer>
+    </div>
+</body>
+
+</html>
