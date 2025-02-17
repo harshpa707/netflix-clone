@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Count Example</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin-top: 50px;
+      }
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Count Example</h1>
+    <p id="countDisplay">The count is 0.</p>
+    <button id="incrementButton">Increment Count</button>
+
+  </body>
+ 
+</script>
+<script>
+    const pageA = document.querySelector("#countDisplay"); // Use '#' to select by ID
+    const buttonA = document.querySelector("#incrementButton"); // Use '#' to select by ID
+    let count = 1;
+
+    buttonA.onclick = () => {
+        pageA.textContent = 'Try again!'; // Corrected capitalization
+        buttonA.textContent = `${count} clicks so far!`; // Fixed typo in "so far"
+        count += 1; // Increment count
+    };
+</script>
+
+</html>
